@@ -1,0 +1,532 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-07T18:11:16.548Z",
+        "line": 2,
+        "name": "Validate google search is working",
+        "description": "",
+        "id": "feature-to-test-google-search-functionality;validate-google-search-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3447227900,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "browser is open",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.browser_is_open()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user is on google search page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user enters a text in search box",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "hits enter",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "user is navigated to search results",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "feature to test google search functionality",
+    "description": "",
+    "id": "feature-to-test-google-search-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/GoogleSearch.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-07T18:11:20.182Z",
+        "line": 12,
+        "name": "Check login is successful with valid credentials",
+        "description": "",
+        "id": "test-login-functionality;check-login-is-successful-with-valid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1996481400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "browser is open",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.browser_is_open()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 967457900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2375120100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters Jana and 12345",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Jana",
+                  "offset": 12
+                },
+                {
+                  "val": "12345",
+                  "offset": 21
+                }
+              ],
+              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2091367500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3238917700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is navigated to the home page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-07T18:11:30.868Z",
+        "line": 13,
+        "name": "Check login is successful with valid credentials",
+        "description": "",
+        "id": "test-login-functionality;check-login-is-successful-with-valid-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2032917400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "browser is open",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.browser_is_open()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1009086400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2335904100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters Elle and 12345",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Elle",
+                  "offset": 12
+                },
+                {
+                  "val": "12345",
+                  "offset": 21
+                }
+              ],
+              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2100973000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4890914300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is navigated to the home page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test login functionality",
+    "description": "",
+    "id": "test-login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/LoginDemo.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-07T18:11:43.255Z",
+        "line": 3,
+        "name": "Check login with valid credentials",
+        "description": "",
+        "id": "demo-functionality-test;check-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user calculated 1/0",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "user enters valid username and password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "valid username",
+                  "offset": 12
+                },
+                {
+                  "val": "password",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "clicks on login button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 830300,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user is navigated to the home page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-07T18:11:43.274Z",
+        "line": 10,
+        "name": "Check login with invalid credentials",
+        "description": "",
+        "id": "demo-functionality-test;check-login-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.navigate()\" because \"this.driver\" is null\r\n\tat steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)\r\n\tat ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/demo.feature:11)\r\n",
+              "duration": 2991500,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 997100,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "user enters invalid username and password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "invalid username",
+                  "offset": 12
+                },
+                {
+                  "val": "password",
+                  "offset": 33
+                }
+              ],
+              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "clicks on login button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "error message is displayed - Invalid Credentials",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "demo functionality test",
+    "description": "",
+    "id": "demo-functionality-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/demo.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-07T18:11:43.298Z",
+        "line": 3,
+        "name": "Check login with valid credentials",
+        "description": "",
+        "id": "login-functionality-test;check-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.navigate()\" because \"this.driver\" is null\r\n\tat steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)\r\n\tat ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/login.feature:4)\r\n",
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1994300,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "user enters valid username and password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "valid username",
+                  "offset": 12
+                },
+                {
+                  "val": "password",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "clicks on login button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3350000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user is navigated to the home page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-07T18:11:43.320Z",
+        "line": 10,
+        "name": "Check login with invalid credentials",
+        "description": "",
+        "id": "login-functionality-test;check-login-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.navigate()\" because \"this.driver\" is null\r\n\tat steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)\r\n\tat ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/login.feature:11)\r\n",
+              "duration": 823500,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "user is on login page",
+            "match": {
+              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "user enters invalid username and password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "invalid username",
+                  "offset": 12
+                },
+                {
+                  "val": "password",
+                  "offset": 33
+                }
+              ],
+              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "clicks on login button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "error message is displayed - Invalid Credentials",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "login functionality test",
+    "description": "",
+    "id": "login-functionality-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
