@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.security.Key;
-
 public class HomePage_PF {
 
     @FindBy(id = "nav-logo-sprites")
@@ -21,6 +19,21 @@ public class HomePage_PF {
 
     @FindBy(className = "a-text-normal")
     WebElement searchError;
+
+    @FindBy(id = "nav-packard-glow-loc-icon")
+    WebElement deliverTo;
+
+    @FindBy(id = "GLUXZipUpdateInput")
+    WebElement zipcodeInput;
+
+    @FindBy(className = "a-button a-button-span12")
+    WebElement applyButton;
+
+    @FindBy(className = "GLUXConfirmClose")
+    WebElement continueButton;
+
+    @FindBy(className = "a-icon a-icon-alert")
+    WebElement deliverToError;
 
     WebDriver driver;
 
@@ -39,5 +52,14 @@ public class HomePage_PF {
     public void ClickEnter(){search.sendKeys(Keys.ENTER);}
     public void SearchResultDisplayed(){searchDisplay.isDisplayed();}
     public void SearchErrorDisplayed(){searchError.isDisplayed();}
+    public void DeliverToClicked(){deliverTo.click();}
+    public void ZipCodeIsEntered(String zipcode){
+        zipcodeInput.sendKeys(zipcode);
+        zipcodeInput.sendKeys(Keys.ENTER);
+        zipcodeInput.sendKeys(Keys.ENTER);
+    }
+    public void ApplyButtonClicked(){applyButton.click();}
+    public void ContinueButtonIsClicked(){continueButton.click();}
+    public void DeliverToErrorDisplayed(){deliverToError.isDisplayed();}
 
 }
