@@ -20,7 +20,7 @@
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="JavaSE-1.8" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER" level="application" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-java:5.7.0" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-core:5.7.0" level="project" />

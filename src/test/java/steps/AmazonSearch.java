@@ -12,12 +12,11 @@ public class AmazonSearch {
 
     public WebDriver driver = null;
     HomePage_PF home;
-    LoginPage_PF login;
 
     @Given("browser is open")
     public void browser_is_open() {
         System.out.println("Browser is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver", "C:/Users/Teodora/Desktop/AmazonSeleniumCucumberTesting/src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();
