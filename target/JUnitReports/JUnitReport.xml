@@ -1,70 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="2" tests="7" time="27.292">
-    <testcase classname="feature to test google search functionality" name="Validate google search is working" time="3.608">
-        <skipped><![CDATA[Given browser is open.......................................................passed
-And user is on google search page...........................................undefined
-When user enters a text in search box.......................................undefined
-And hits enter..............................................................undefined
-Then user is navigated to search results....................................undefined
-]]></skipped>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="8" time="96.321">
+    <testcase classname="Test add to cart functionality" name="Check if add to cart feature is successful" time="34.509">
+        <system-out><![CDATA[Given page displays products................................................passed
+When products are displayed.................................................passed
+And user clicks on product..................................................passed
+And user clicks add to cart.................................................passed
+Then product is displayed in shopping cart..................................passed
+]]></system-out>
     </testcase>
-    <testcase classname="Test login functionality" name="Check login is successful with valid credentials" time="10.684">
-        <system-out><![CDATA[Given browser is open.......................................................passed
-And user is on login page...................................................passed
-When user enters Jana and 12345.............................................passed
-And user clicks on login button.............................................passed
+    <testcase classname="Test deliver to functionality" name="Check if deliver to information is valid" time="10.024">
+        <system-out><![CDATA[Given browser is open - deliver to..........................................passed
+And user is on amazon home page - deliver to................................passed
+When user clicks on deliver to button.......................................passed
+And user enters deliver to zipcode 20008....................................passed
 Then user is navigated to the home page.....................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Test login functionality" name="Check login is successful with valid credentials 2" time="12.372">
-        <system-out><![CDATA[Given browser is open.......................................................passed
-And user is on login page...................................................passed
-When user enters Elle and 12345.............................................passed
-And user clicks on login button.............................................passed
-Then user is navigated to the home page.....................................passed
+    <testcase classname="Test deliver to functionality" name="Check if deliver to is invalid" time="6.446">
+        <system-out><![CDATA[Given browser is open - deliver to..........................................passed
+And user is on amazon home page - deliver to................................passed
+When user clicks on deliver to button.......................................passed
+And user enters deliver to zipcode 1300.....................................passed
+Then page displays error....................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="demo functionality test" name="Check login with valid credentials" time="0.011">
-        <skipped><![CDATA[Given user calculated 1/0...................................................undefined
-When user enters valid username and password................................skipped
-And clicks on login button..................................................undefined
-Then user is navigated to the home page.....................................skipped
+    <testcase classname="Test login functionality" name="Check if login is successful with valid credentials" time="11.468">
+        <system-out><![CDATA[Given browser is open - login...............................................passed
+And user is on amazon home page - login.....................................passed
+When user clicks on login button............................................passed
+And user enters testskit12345@gmail.com email...............................passed
+And user clicks continue button.............................................passed
+And user enters Skit123! password...........................................passed
+And user clicks on sign in button...........................................passed
+Then user is navigated to the home page - login.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test login functionality" name="Check if login is unsuccessful with invalid password" time="13.189">
+        <system-out><![CDATA[Given browser is open - login...............................................passed
+And user is on amazon home page - login.....................................passed
+When user clicks on login button............................................passed
+And user enters testskit12345@gmail.com email...............................passed
+And user clicks continue button.............................................passed
+And user enters invalid WrongPassword.......................................passed
+And user clicks on sign in button...........................................passed
+Then page displays invalid password error message...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test login functionality" name="Check if login is unsuccessful with invalid email" time="0.009">
+        <skipped><![CDATA[Given browser is open.......................................................undefined
+And user is on amazon home page.............................................undefined
+When user clicks on login button............................................skipped
+And user enters wrong test_skit12345@gmail.com..............................skipped
+And user clicks continue button.............................................skipped
+Then page displays invalid email error message..............................skipped
 ]]></skipped>
     </testcase>
-    <testcase classname="demo functionality test" name="Check login with invalid credentials" time="0.011">
-        <failure message="Cannot invoke &quot;org.openqa.selenium.WebDriver.navigate()&quot; because &quot;this.driver&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given user is on login page.................................................failed
-When user enters invalid username and password..............................skipped
-And clicks on login button..................................................undefined
-Then error message is displayed - Invalid Credentials.......................undefined
-
-StackTrace:
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "this.driver" is null
-	at steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)
-	at ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/demo.feature:11)
-]]></failure>
+    <testcase classname="Test search functionality" name="Check if search is successful with valid search words" time="8.772">
+        <system-out><![CDATA[Given browser is open - search..............................................passed
+And user is on amazon home page - search....................................passed
+When user enters search input laptop........................................passed
+And user clicks enter.......................................................passed
+Then page displays search items.............................................passed
+]]></system-out>
     </testcase>
-    <testcase classname="login functionality test" name="Check login with valid credentials" time="0.017">
-        <failure message="Cannot invoke &quot;org.openqa.selenium.WebDriver.navigate()&quot; because &quot;this.driver&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given user is on login page.................................................failed
-When user enters valid username and password................................skipped
-And clicks on login button..................................................undefined
-Then user is navigated to the home page.....................................skipped
-
-StackTrace:
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "this.driver" is null
-	at steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)
-	at ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/login.feature:4)
-]]></failure>
-    </testcase>
-    <testcase classname="login functionality test" name="Check login with invalid credentials" time="0.005">
-        <failure message="Cannot invoke &quot;org.openqa.selenium.WebDriver.navigate()&quot; because &quot;this.driver&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given user is on login page.................................................failed
-When user enters invalid username and password..............................skipped
-And clicks on login button..................................................undefined
-Then error message is displayed - Invalid Credentials.......................undefined
-
-StackTrace:
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "this.driver" is null
-	at steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)
-	at ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/login.feature:11)
-]]></failure>
+    <testcase classname="Test search functionality" name="Check if search is successful with invalid search words" time="11.578">
+        <system-out><![CDATA[Given browser is open - search..............................................passed
+And user is on amazon home page - search....................................passed
+When user enters search input fjskdzslmdcbjfskd123e4r323....................passed
+And user clicks enter.......................................................passed
+Then page displays search error.............................................passed
+]]></system-out>
     </testcase>
 </testsuite>

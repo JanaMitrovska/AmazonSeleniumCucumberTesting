@@ -1,14 +1,15 @@
 Feature: Test login functionality
 
+  @Smoke
   Scenario Outline: Check if login is successful with valid credentials
-    Given browser is open
-    And user is on amazon home page
+    Given browser is open - login
+    And user is on amazon home page - login
     When user clicks on login button
     And user enters <email> email
     And user clicks continue button
     And user enters <password> password
     And user clicks on sign in button
-    Then user is navigated to the home page
+    Then user is navigated to the home page - login
 
 
     Examples:
@@ -17,8 +18,8 @@ Feature: Test login functionality
 
 
   Scenario Outline: Check if login is unsuccessful with invalid password
-    Given browser is open
-    And user is on amazon home page
+    Given browser is open - login
+    And user is on amazon home page - login
     When user clicks on login button
     And user enters <email> email
     And user clicks continue button

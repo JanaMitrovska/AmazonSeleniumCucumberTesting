@@ -1,20 +1,24 @@
 package steps;
 
 import Pages.AmazonLoginPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pageFactory.HomePage_PF;
+import pageFactory.LoginPage_PF;
 
 import java.util.concurrent.TimeUnit;
 
 public class AmazonLogin {
     WebDriver driver = null;
-    AmazonLoginPage login;
+    HomePage_PF home;
+    LoginPage_PF login;
 
-    @Given("browser is open")
-    public void browser_is_open() {
+    @Given("browser is open - login")
+    public void browserIsOpenLogin() {
         System.out.println("Browser is open");
         //smeni lokacija na driver
         System.setProperty("webdriver.chrome.driver", "C:/Users/mitro/Desktop/CucumberTests/src/test/resources/drivers/chromedriver.exe");
@@ -24,8 +28,9 @@ public class AmazonLogin {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
-    @Given("user is on amazon home page")
-    public void user_is_on_amazon_home_page() {
+
+    @And("user is on amazon home page - login")
+    public void userIsOnAmazonHomePageLogin() {
         System.out.println("User is on amazon home page");
 
         driver.navigate().to("https://amazon.com");
@@ -35,7 +40,7 @@ public class AmazonLogin {
     public void user_clicks_on_log_in_button() {
         System.out.println("User clicks on login button");
 
-        login = new AmazonLoginPage(driver);
+        login = new LoginPage_PF (driver);
 
         login.clickLogin();
     }
@@ -51,7 +56,7 @@ public class AmazonLogin {
     public void user_clicks_continue_button() {
         System.out.println("User clicks continue button");
 
-        login.clickContinueButton();
+        login.clickContinue();
     }
 
     @When("^user enters (.*) password$")
@@ -69,18 +74,22 @@ public class AmazonLogin {
 
         Thread.sleep(2000);
     }
-    @Then("user is navigated to the home page")
-    public void user_is_navigated_to_the_home_page() {
+
+    @Then("user is navigated to the home page - login")
+    public void userIsNavigatedToTheHomePageLogin() {
         System.out.println("User is on home page");
 
-        login.UserIsLoggedIn();
+        home = new HomePage_PF(driver);
+
+        home.IsDisplayed();
 
         driver.close();
         driver.quit();
     }
 
+
     //------------------------------------------------------------------------------------------------------------------
-    //Wrong Password Scenario
+    //Pogreshen password cekori
     @When("^user enters invalid (.*)$")
     public void user_enters_invalid_password(String password) {
         System.out.println("User enters invalid password");
@@ -92,14 +101,13 @@ public class AmazonLogin {
     public void page_displays_invalid_password_error_message() {
         System.out.println("page displays invalid password error message");
 
-        login.InvalidPasswordError();
+        login.displayPasswordError();
 
         driver.close();
         driver.quit();
     }
 
     //------------------------------------------------------------------------------------------------------------------
-    //Wrong Email Scenario
     @When("^user enters wrong (.*)$")
     public void user_enters_wrong_email(String email) {
         System.out.println("User enters wrong email");
@@ -111,11 +119,12 @@ public class AmazonLogin {
     public void page_displays_invalid_email_error_message() {
         System.out.println("page displays invalid email error message");
 
-        login.InvalidEmailError();
+        login.displayEmailError();
 
         driver.close();
         driver.quit();
     }
+
 
 
 }

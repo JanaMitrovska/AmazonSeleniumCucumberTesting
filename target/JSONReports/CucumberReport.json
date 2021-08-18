@@ -3,232 +3,575 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-08-07T18:11:16.548Z",
-        "line": 2,
-        "name": "Validate google search is working",
+        "start_timestamp": "2021-08-18T01:13:15.937Z",
+        "line": 4,
+        "name": "Check if add to cart feature is successful",
         "description": "",
-        "id": "feature-to-test-google-search-functionality;validate-google-search-is-working",
+        "id": "test-add-to-cart-functionality;check-if-add-to-cart-feature-is-successful",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3447227900,
+              "duration": 29179334600,
               "status": "passed"
             },
-            "line": 3,
-            "name": "browser is open",
+            "line": 5,
+            "name": "page displays products",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.browser_is_open()"
+              "location": "steps.AddToCartTest.pageDisplaysProducts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 73988800,
+              "status": "passed"
             },
-            "line": 4,
-            "name": "user is on google search page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "line": 6,
+            "name": "products are displayed",
+            "match": {
+              "location": "steps.AddToCartTest.productsAreDisplayed()"
             },
-            "line": 5,
-            "name": "user enters a text in search box",
-            "match": {},
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 3822412700,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "hits enter",
-            "match": {},
+            "line": 7,
+            "name": "user clicks on product",
+            "match": {
+              "location": "steps.AddToCartTest.user_clicks_on_product()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 340074500,
+              "status": "passed"
             },
-            "line": 7,
-            "name": "user is navigated to search results",
-            "match": {},
+            "line": 8,
+            "name": "user clicks add to cart",
+            "match": {
+              "location": "steps.AddToCartTest.user_clicks_add_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1029507800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "product is displayed in shopping cart",
+            "match": {
+              "location": "steps.AddToCartTest.product_is_displayed_in_shopping_cart()"
+            },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
           }
         ]
       }
     ],
-    "name": "feature to test google search functionality",
+    "name": "Test add to cart functionality",
     "description": "",
-    "id": "feature-to-test-google-search-functionality",
+    "id": "test-add-to-cart-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/GoogleSearch.feature",
+    "uri": "file:src/test/resources/features/AddToCart.feature",
     "tags": []
   },
   {
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-08-07T18:11:20.182Z",
+        "start_timestamp": "2021-08-18T01:13:50.447Z",
         "line": 12,
-        "name": "Check login is successful with valid credentials",
+        "name": "Check if deliver to information is valid",
         "description": "",
-        "id": "test-login-functionality;check-login-is-successful-with-valid-credentials;;2",
+        "id": "test-deliver-to-functionality;check-if-deliver-to-information-is-valid;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1996481400,
+              "duration": 1372533700,
               "status": "passed"
             },
             "line": 4,
-            "name": "browser is open",
+            "name": "browser is open - deliver to",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.browser_is_open()"
+              "location": "steps.AmazonDeliverTo.browserIsOpenDeliverTo()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 967457900,
+              "duration": 3098741400,
               "status": "passed"
             },
             "line": 5,
-            "name": "user is on login page",
+            "name": "user is on amazon home page - deliver to",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+              "location": "steps.AmazonDeliverTo.userIsOnAmazonHomePageDeliverTo()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2375120100,
+              "duration": 314183500,
               "status": "passed"
             },
             "line": 6,
-            "name": "user enters Jana and 12345",
+            "name": "user clicks on deliver to button",
             "match": {
-              "arguments": [
-                {
-                  "val": "Jana",
-                  "offset": 12
-                },
-                {
-                  "val": "12345",
-                  "offset": 21
-                }
-              ],
-              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+              "location": "steps.AmazonDeliverTo.user_clicks_on_deliver_to_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2091367500,
+              "duration": 513625300,
               "status": "passed"
             },
             "line": 7,
-            "name": "user clicks on login button",
+            "name": "user enters deliver to zipcode 20008",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_clicks_on_login_button()"
+              "arguments": [
+                {
+                  "val": "20008",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.AmazonDeliverTo.userEntersDeliverToZipcodeZipcode(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3238917700,
+              "duration": 4709123400,
               "status": "passed"
             },
             "line": 8,
             "name": "user is navigated to the home page",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
+              "location": "steps.AmazonDeliverTo.user_is_navigated_to_the_home_page()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2021-08-07T18:11:30.868Z",
-        "line": 13,
-        "name": "Check login is successful with valid credentials",
+        "start_timestamp": "2021-08-18T01:14:00.471Z",
+        "line": 23,
+        "name": "Check if deliver to is invalid",
         "description": "",
-        "id": "test-login-functionality;check-login-is-successful-with-valid-credentials;;3",
+        "id": "test-deliver-to-functionality;check-if-deliver-to-is-invalid;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2032917400,
+              "duration": 1330435300,
               "status": "passed"
             },
-            "line": 4,
-            "name": "browser is open",
+            "line": 15,
+            "name": "browser is open - deliver to",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.browser_is_open()"
+              "location": "steps.AmazonDeliverTo.browserIsOpenDeliverTo()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1009086400,
+              "duration": 3288983500,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user is on login page",
+            "line": 16,
+            "name": "user is on amazon home page - deliver to",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+              "location": "steps.AmazonDeliverTo.userIsOnAmazonHomePageDeliverTo()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2335904100,
+              "duration": 335101400,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user enters Elle and 12345",
+            "line": 17,
+            "name": "user clicks on deliver to button",
             "match": {
-              "arguments": [
-                {
-                  "val": "Elle",
-                  "offset": 12
-                },
-                {
-                  "val": "12345",
-                  "offset": 21
-                }
-              ],
-              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+              "location": "steps.AmazonDeliverTo.user_clicks_on_deliver_to_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2100973000,
+              "duration": 669210800,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user clicks on login button",
+            "line": 18,
+            "name": "user enters deliver to zipcode 1300",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_clicks_on_login_button()"
+              "arguments": [
+                {
+                  "val": "1300",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.AmazonDeliverTo.userEntersDeliverToZipcodeZipcode(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4890914300,
+              "duration": 823125000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "page displays error",
+            "match": {
+              "location": "steps.AmazonDeliverTo.page_displays_error()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test deliver to functionality",
+    "description": "",
+    "id": "test-deliver-to-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AmazonDeliverTo.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-18T01:14:06.918Z",
+        "line": 17,
+        "name": "Check if login is successful with valid credentials",
+        "description": "",
+        "id": "test-login-functionality;check-if-login-is-successful-with-valid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1391752400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "browser is open - login",
+            "match": {
+              "location": "steps.AmazonLogin.browserIsOpenLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3236858400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on amazon home page - login",
+            "match": {
+              "location": "steps.AmazonLogin.userIsOnAmazonHomePageLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 762362800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_on_log_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 156581800,
               "status": "passed"
             },
             "line": 8,
-            "name": "user is navigated to the home page",
+            "name": "user enters testskit12345@gmail.com email",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
+              "arguments": [
+                {
+                  "val": "testskit12345@gmail.com",
+                  "offset": 12
+                }
+              ],
+              "location": "steps.AmazonLogin.user_enters_email(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1706309300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks continue button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51828900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters Skit123! password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Skit123!",
+                  "offset": 12
+                }
+              ],
+              "location": "steps.AmazonLogin.user_enters_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2129428000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2031077500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user is navigated to the home page - login",
+            "match": {
+              "location": "steps.AmazonLogin.userIsNavigatedToTheHomePageLogin()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-18T01:14:18.390Z",
+        "line": 32,
+        "name": "Check if login is unsuccessful with invalid password",
+        "description": "",
+        "id": "test-login-functionality;check-if-login-is-unsuccessful-with-invalid-password;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1286648100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "browser is open - login",
+            "match": {
+              "location": "steps.AmazonLogin.browserIsOpenLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2912629000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user is on amazon home page - login",
+            "match": {
+              "location": "steps.AmazonLogin.userIsOnAmazonHomePageLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 731045100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_on_log_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171540800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user enters testskit12345@gmail.com email",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testskit12345@gmail.com",
+                  "offset": 12
+                }
+              ],
+              "location": "steps.AmazonLogin.user_enters_email(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1176902300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user clicks continue button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63776200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user enters invalid WrongPassword",
+            "match": {
+              "arguments": [
+                {
+                  "val": "WrongPassword",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.AmazonLogin.user_enters_invalid_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2122485800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4717045200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "page displays invalid password error message",
+            "match": {
+              "location": "steps.AmazonLogin.page_displays_invalid_password_error_message()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-18T01:14:31.604Z",
+        "line": 45,
+        "name": "Check if login is unsuccessful with invalid email",
+        "description": "",
+        "id": "test-login-functionality;check-if-login-is-unsuccessful-with-invalid-email;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 36,
+            "name": "browser is open",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 37,
+            "name": "user is on amazon home page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 38,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_on_log_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 39,
+            "name": "user enters wrong test_skit12345@gmail.com",
+            "match": {
+              "arguments": [
+                {
+                  "val": "test_skit12345@gmail.com",
+                  "offset": 18
+                }
+              ],
+              "location": "steps.AmazonLogin.user_enters_wrong_email(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 997600,
+              "status": "skipped"
+            },
+            "line": 40,
+            "name": "user clicks continue button",
+            "match": {
+              "location": "steps.AmazonLogin.user_clicks_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 41,
+            "name": "page displays invalid email error message",
+            "match": {
+              "location": "steps.AmazonLogin.page_displays_invalid_email_error_message()"
             },
             "keyword": "Then "
           }
@@ -239,294 +582,177 @@
     "description": "",
     "id": "test-login-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/LoginDemo.feature",
+    "uri": "file:src/test/resources/features/AmazonLogin.feature",
     "tags": []
   },
   {
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-08-07T18:11:43.255Z",
-        "line": 3,
-        "name": "Check login with valid credentials",
+        "start_timestamp": "2021-08-18T01:14:31.621Z",
+        "line": 13,
+        "name": "Check if search is successful with valid search words",
         "description": "",
-        "id": "demo-functionality-test;check-login-with-valid-credentials",
+        "id": "test-search-functionality;check-if-search-is-successful-with-valid-search-words;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "status": "undefined"
-            },
-            "line": 4,
-            "name": "user calculated 1/0",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
+              "duration": 1348818100,
+              "status": "passed"
             },
             "line": 5,
-            "name": "user enters valid username and password",
+            "name": "browser is open - search",
             "match": {
-              "arguments": [
-                {
-                  "val": "valid username",
-                  "offset": 12
-                },
-                {
-                  "val": "password",
-                  "offset": 31
-                }
-              ],
-              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 6,
-            "name": "clicks on login button",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 830300,
-              "status": "skipped"
-            },
-            "line": 7,
-            "name": "user is navigated to the home page",
-            "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-08-07T18:11:43.274Z",
-        "line": 10,
-        "name": "Check login with invalid credentials",
-        "description": "",
-        "id": "demo-functionality-test;check-login-with-invalid-credentials",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.navigate()\" because \"this.driver\" is null\r\n\tat steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)\r\n\tat ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/demo.feature:11)\r\n",
-              "duration": 2991500,
-              "status": "failed"
-            },
-            "line": 11,
-            "name": "user is on login page",
-            "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+              "location": "steps.AmazonSearch.browserIsOpenSearch()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 997100,
-              "status": "skipped"
+              "duration": 2740352600,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "user enters invalid username and password",
+            "line": 6,
+            "name": "user is on amazon home page - search",
+            "match": {
+              "location": "steps.AmazonSearch.userIsOnAmazonHomePageSearch()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 701126700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters search input laptop",
             "match": {
               "arguments": [
                 {
-                  "val": "invalid username",
-                  "offset": 12
-                },
-                {
-                  "val": "password",
-                  "offset": 33
+                  "val": "laptop",
+                  "offset": 25
                 }
               ],
-              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+              "location": "steps.AmazonSearch.userEntersSearchInputInput(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 3155651100,
+              "status": "passed"
             },
-            "line": 13,
-            "name": "clicks on login button",
-            "match": {},
+            "line": 8,
+            "name": "user clicks enter",
+            "match": {
+              "location": "steps.AmazonSearch.user_clicks_enter()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 821037600,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "error message is displayed - Invalid Credentials",
-            "match": {},
+            "line": 9,
+            "name": "page displays search items",
+            "match": {
+              "location": "steps.AmazonSearch.page_displays_search_items()"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@smoke"
-          }
-        ]
-      }
-    ],
-    "name": "demo functionality test",
-    "description": "",
-    "id": "demo-functionality-test",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/demo.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2021-08-07T18:11:43.298Z",
-        "line": 3,
-        "name": "Check login with valid credentials",
-        "description": "",
-        "id": "login-functionality-test;check-login-with-valid-credentials",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.navigate()\" because \"this.driver\" is null\r\n\tat steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)\r\n\tat ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/login.feature:4)\r\n",
-              "status": "failed"
-            },
-            "line": 4,
-            "name": "user is on login page",
-            "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1994300,
-              "status": "skipped"
-            },
-            "line": 5,
-            "name": "user enters valid username and password",
-            "match": {
-              "arguments": [
-                {
-                  "val": "valid username",
-                  "offset": 12
-                },
-                {
-                  "val": "password",
-                  "offset": 31
-                }
-              ],
-              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 6,
-            "name": "clicks on login button",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3350000,
-              "status": "skipped"
-            },
-            "line": 7,
-            "name": "user is navigated to the home page",
-            "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_navigated_to_the_home_page()"
-            },
-            "keyword": "Then "
+            "name": "@Smoke"
           }
         ]
       },
       {
-        "start_timestamp": "2021-08-07T18:11:43.320Z",
-        "line": 10,
-        "name": "Check login with invalid credentials",
+        "start_timestamp": "2021-08-18T01:14:40.399Z",
+        "line": 24,
+        "name": "Check if search is successful with invalid search words",
         "description": "",
-        "id": "login-functionality-test;check-login-with-invalid-credentials",
+        "id": "test-search-functionality;check-if-search-is-successful-with-invalid-search-words;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.navigate()\" because \"this.driver\" is null\r\n\tat steps.LoginDemoStepsPOM.user_is_on_login_page(LoginDemoStepsPOM.java:31)\r\n\tat ✽.user is on login page(file:///C:/Users/mitro/Desktop/CucumberTests/src/test/resources/features/login.feature:11)\r\n",
-              "duration": 823500,
-              "status": "failed"
+              "duration": 1369522300,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "user is on login page",
+            "line": 16,
+            "name": "browser is open - search",
             "match": {
-              "location": "steps.LoginDemoStepsPOM.user_is_on_login_page()"
+              "location": "steps.AmazonSearch.browserIsOpenSearch()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 3816381500,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "user enters invalid username and password",
+            "line": 17,
+            "name": "user is on amazon home page - search",
+            "match": {
+              "location": "steps.AmazonSearch.userIsOnAmazonHomePageSearch()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 698262300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters search input fjskdzslmdcbjfskd123e4r323",
             "match": {
               "arguments": [
                 {
-                  "val": "invalid username",
-                  "offset": 12
-                },
-                {
-                  "val": "password",
-                  "offset": 33
+                  "val": "fjskdzslmdcbjfskd123e4r323",
+                  "offset": 25
                 }
               ],
-              "location": "steps.LoginDemoStepsPOM.user_enters_valid_username_and_password(java.lang.String,java.lang.String)"
+              "location": "steps.AmazonSearch.userEntersSearchInputInput(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 961879000,
+              "status": "passed"
             },
-            "line": 13,
-            "name": "clicks on login button",
-            "match": {},
+            "line": 19,
+            "name": "user clicks enter",
+            "match": {
+              "location": "steps.AmazonSearch.user_clicks_enter()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 4730231900,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "error message is displayed - Invalid Credentials",
-            "match": {},
+            "line": 20,
+            "name": "page displays search error",
+            "match": {
+              "location": "steps.AmazonSearch.page_displays_search_error()"
+            },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
           }
         ]
       }
     ],
-    "name": "login functionality test",
+    "name": "Test search functionality",
     "description": "",
-    "id": "login-functionality-test",
+    "id": "test-search-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/login.feature",
+    "uri": "file:src/test/resources/features/AmazonSearch.feature",
     "tags": []
   }
 ]

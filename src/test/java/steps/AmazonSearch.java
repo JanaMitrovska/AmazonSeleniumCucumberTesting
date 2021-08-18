@@ -13,32 +13,34 @@ public class AmazonSearch {
     public WebDriver driver = null;
     HomePage_PF home;
 
-    @Given("browser is open")
-    public void browser_is_open() {
+    @Given("browser is open - search")
+    public void browserIsOpenSearch() {
         System.out.println("Browser is open");
 
-        System.setProperty("webdriver.chrome.driver", "C:/Users/Teodora/Desktop/AmazonSeleniumCucumberTesting/src/test/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/mitro/Desktop/CucumberTests/src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
-    @Given("user is on amazon home page")
-    public void user_is_on_amazon_home_page() {
+
+    @And("user is on amazon home page - search")
+    public void userIsOnAmazonHomePageSearch() {
         System.out.println("User is on amazon home page");
 
         driver.navigate().to("https://amazon.com");
     }
 
-    @When("^user enters valid (.*) input$")
-    public void user_enters_valid_input(String input) {
+    @When("^user enters search input (.*)$")
+    public void userEntersSearchInputInput(String input) {
         System.out.println("user enters valid input");
 
-         home = new HomePage_PF(driver);
+        home = new HomePage_PF(driver);
 
-         home.ClickSearchBar(input);
+        home.ClickSearchBar(input);
     }
+
 
 
     @When("user clicks enter")
@@ -60,14 +62,6 @@ public class AmazonSearch {
     }
 
     //=======
-    @When("^user enters invalid (.*) input$")
-    public void user_enters_invalid_input(String input) {
-        System.out.println("user enters invalid input");
-
-        home = new HomePage_PF(driver);
-
-        home.ClickSearchBar(input);
-    }
 
     @Then("page displays search error")
     public void page_displays_search_error() {

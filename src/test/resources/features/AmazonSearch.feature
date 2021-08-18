@@ -1,9 +1,10 @@
 Feature: Test search functionality
 
+  @Smoke
   Scenario Outline: Check if search is successful with valid search words
-    Given browser is open
-    And user is on amazon home page
-    When user enters valid <input> input
+    Given browser is open - search
+    And user is on amazon home page - search
+    When user enters search input <input>
     And user clicks enter
     Then page displays search items
 
@@ -12,9 +13,9 @@ Feature: Test search functionality
       | laptop |
 
   Scenario Outline: Check if search is successful with invalid search words
-    Given browser is open
-    And user is on amazon home page
-    When user enters invalid <input> input
+    Given browser is open - search
+    And user is on amazon home page - search
+    When user enters search input <input>
     And user clicks enter
     Then page displays search error
 

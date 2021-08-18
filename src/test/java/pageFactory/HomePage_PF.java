@@ -32,7 +32,8 @@ public class HomePage_PF {
     @FindBy(className = "GLUXConfirmClose")
     WebElement continueButton;
 
-    @FindBy(className = "a-icon a-icon-alert")
+    ////*[@id="GLUXZipError"]/div/div/i
+    @FindBy(xpath = "//*[@id='GLUXZipError']/div/div/i")
     WebElement deliverToError;
 
     WebDriver driver;
