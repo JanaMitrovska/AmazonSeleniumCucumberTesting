@@ -3,308 +3,127 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-08-18T01:13:15.937Z",
-        "line": 4,
-        "name": "Check if add to cart feature is successful",
-        "description": "",
-        "id": "test-add-to-cart-functionality;check-if-add-to-cart-feature-is-successful",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
+        "start_timestamp": "2021-09-04T15:34:47.326Z",
+        "before": [
           {
             "result": {
-              "duration": 29179334600,
+              "duration": 3137641100,
               "status": "passed"
             },
-            "line": 5,
-            "name": "page displays products",
             "match": {
-              "location": "steps.AddToCartTest.pageDisplaysProducts()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 73988800,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "products are displayed",
-            "match": {
-              "location": "steps.AddToCartTest.productsAreDisplayed()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3822412700,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user clicks on product",
-            "match": {
-              "location": "steps.AddToCartTest.user_clicks_on_product()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 340074500,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user clicks add to cart",
-            "match": {
-              "location": "steps.AddToCartTest.user_clicks_add_to_cart()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1029507800,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "product is displayed in shopping cart",
-            "match": {
-              "location": "steps.AddToCartTest.product_is_displayed_in_shopping_cart()"
-            },
-            "keyword": "Then "
+              "location": "stepsForHooks.HooksSteps.browserSetup()"
+            }
           }
         ],
-        "tags": [
-          {
-            "name": "@Smoke"
-          }
-        ]
-      }
-    ],
-    "name": "Test add to cart functionality",
-    "description": "",
-    "id": "test-add-to-cart-functionality",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AddToCart.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2021-08-18T01:13:50.447Z",
-        "line": 12,
-        "name": "Check if deliver to information is valid",
-        "description": "",
-        "id": "test-deliver-to-functionality;check-if-deliver-to-information-is-valid;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1372533700,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "browser is open - deliver to",
-            "match": {
-              "location": "steps.AmazonDeliverTo.browserIsOpenDeliverTo()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3098741400,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user is on amazon home page - deliver to",
-            "match": {
-              "location": "steps.AmazonDeliverTo.userIsOnAmazonHomePageDeliverTo()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 314183500,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user clicks on deliver to button",
-            "match": {
-              "location": "steps.AmazonDeliverTo.user_clicks_on_deliver_to_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 513625300,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user enters deliver to zipcode 20008",
-            "match": {
-              "arguments": [
-                {
-                  "val": "20008",
-                  "offset": 31
-                }
-              ],
-              "location": "steps.AmazonDeliverTo.userEntersDeliverToZipcodeZipcode(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4709123400,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user is navigated to the home page",
-            "match": {
-              "location": "steps.AmazonDeliverTo.user_is_navigated_to_the_home_page()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-08-18T01:14:00.471Z",
-        "line": 23,
-        "name": "Check if deliver to is invalid",
-        "description": "",
-        "id": "test-deliver-to-functionality;check-if-deliver-to-is-invalid;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1330435300,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "browser is open - deliver to",
-            "match": {
-              "location": "steps.AmazonDeliverTo.browserIsOpenDeliverTo()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3288983500,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "user is on amazon home page - deliver to",
-            "match": {
-              "location": "steps.AmazonDeliverTo.userIsOnAmazonHomePageDeliverTo()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 335101400,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "user clicks on deliver to button",
-            "match": {
-              "location": "steps.AmazonDeliverTo.user_clicks_on_deliver_to_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 669210800,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "user enters deliver to zipcode 1300",
-            "match": {
-              "arguments": [
-                {
-                  "val": "1300",
-                  "offset": 31
-                }
-              ],
-              "location": "steps.AmazonDeliverTo.userEntersDeliverToZipcodeZipcode(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 823125000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "page displays error",
-            "match": {
-              "location": "steps.AmazonDeliverTo.page_displays_error()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "Test deliver to functionality",
-    "description": "",
-    "id": "test-deliver-to-functionality",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AmazonDeliverTo.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2021-08-18T01:14:06.918Z",
-        "line": 17,
+        "line": 15,
         "name": "Check if login is successful with valid credentials",
         "description": "",
-        "id": "test-login-functionality;check-if-login-is-successful-with-valid-credentials;;2",
+        "id": "check-login-functionality;check-if-login-is-successful-with-valid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2382423800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsForHooks.HooksSteps.tearDown()"
+            }
+          },
+          {
+            "result": {
+              "duration": 648223200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsForHooks.HooksSteps.quitDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1391752400,
+              "duration": 2421217700,
               "status": "passed"
             },
-            "line": 5,
-            "name": "browser is open - login",
+            "before": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 4,
+            "name": "user is on amazon home page",
             "match": {
-              "location": "steps.AmazonLogin.browserIsOpenLogin()"
+              "location": "stepsForHooks.HooksSteps.userIsOnAmazonHomePageLogin()"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 494400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 3236858400,
+              "duration": 1434611100,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user is on amazon home page - login",
-            "match": {
-              "location": "steps.AmazonLogin.userIsOnAmazonHomePageLogin()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 762362800,
-              "status": "passed"
-            },
-            "line": 7,
+            "before": [
+              {
+                "result": {
+                  "duration": 500700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 5,
             "name": "user clicks on login button",
             "match": {
-              "location": "steps.AmazonLogin.user_clicks_on_log_in_button()"
+              "location": "stepsForHooks.HooksSteps.user_clicks_on_log_in_button()"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 156581800,
+              "duration": 146390200,
               "status": "passed"
             },
-            "line": 8,
+            "before": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 6,
             "name": "user enters testskit12345@gmail.com email",
             "match": {
               "arguments": [
@@ -313,28 +132,70 @@
                   "offset": 12
                 }
               ],
-              "location": "steps.AmazonLogin.user_enters_email(java.lang.String)"
+              "location": "stepsForHooks.HooksSteps.user_enters_email(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1706309300,
+              "duration": 888389800,
               "status": "passed"
             },
-            "line": 9,
+            "before": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 7,
             "name": "user clicks continue button",
             "match": {
-              "location": "steps.AmazonLogin.user_clicks_continue_button()"
+              "location": "stepsForHooks.HooksSteps.user_clicks_continue_button()"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 500700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 51828900,
+              "duration": 85226800,
               "status": "passed"
             },
-            "line": 10,
+            "before": [
+              {
+                "result": {
+                  "duration": 499700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 8,
             "name": "user enters Skit123! password",
             "match": {
               "arguments": [
@@ -343,92 +204,209 @@
                   "offset": 12
                 }
               ],
-              "location": "steps.AmazonLogin.user_enters_password(java.lang.String)"
+              "location": "stepsForHooks.HooksSteps.user_enters_password(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2129428000,
+              "duration": 2067566700,
               "status": "passed"
             },
-            "line": 11,
+            "before": [
+              {
+                "result": {
+                  "duration": 501400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 9,
             "name": "user clicks on sign in button",
             "match": {
-              "location": "steps.AmazonLogin.user_clicks_on_sign_in_button()"
+              "location": "stepsForHooks.HooksSteps.user_clicks_on_sign_in_button()"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2031077500,
+              "duration": 3016998600,
               "status": "passed"
             },
-            "line": 12,
+            "before": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 10,
             "name": "user is navigated to the home page - login",
             "match": {
-              "location": "steps.AmazonLogin.userIsNavigatedToTheHomePageLogin()"
+              "location": "stepsForHooks.HooksSteps.user_is_navigated_to_the_home_page_login()"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Smoke"
           }
         ]
       },
       {
-        "start_timestamp": "2021-08-18T01:14:18.390Z",
-        "line": 32,
+        "start_timestamp": "2021-09-04T15:35:03.775Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1604775200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsForHooks.HooksSteps.browserSetup()"
+            }
+          }
+        ],
+        "line": 28,
         "name": "Check if login is unsuccessful with invalid password",
         "description": "",
-        "id": "test-login-functionality;check-if-login-is-unsuccessful-with-invalid-password;;2",
+        "id": "check-login-functionality;check-if-login-is-unsuccessful-with-invalid-password;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2082888500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsForHooks.HooksSteps.tearDown()"
+            }
+          },
+          {
+            "result": {
+              "duration": 566734800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepsForHooks.HooksSteps.quitDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1286648100,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 18.930\n  (Session info: chrome\u003d93.0.4577.63)\nBuild info: version: \u00274.0.0-alpha-5\u0027, revision: \u0027b3a0d621cc\u0027\nSystem info: host: \u0027TEODORA\u0027, ip: \u0027192.168.0.103\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002713\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\\Users\\Teodora\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52529}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 6e49082c7476d36c3d67206fced60032\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:282)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:935)\r\n\tat stepsForHooks.HooksSteps.userIsOnAmazonHomePageLogin(HooksSteps.java:57)\r\n\tat ✽.user is on amazon home page(file:///F:/6%20семестар%202021/Софтверски%20квалитет%20и%20тестирање/Testing/AmazonSeleniumCucumberTesting/src/test/resources/Hooks/Hooks.feature:18)\r\n",
+              "duration": 20020371100,
+              "status": "failed"
             },
-            "line": 21,
-            "name": "browser is open - login",
+            "before": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 18,
+            "name": "user is on amazon home page",
             "match": {
-              "location": "steps.AmazonLogin.browserIsOpenLogin()"
+              "location": "stepsForHooks.HooksSteps.userIsOnAmazonHomePageLogin()"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 498900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2912629000,
-              "status": "passed"
+              "duration": 502500,
+              "status": "skipped"
             },
-            "line": 22,
-            "name": "user is on amazon home page - login",
-            "match": {
-              "location": "steps.AmazonLogin.userIsOnAmazonHomePageLogin()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 731045100,
-              "status": "passed"
-            },
-            "line": 23,
+            "before": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 19,
             "name": "user clicks on login button",
             "match": {
-              "location": "steps.AmazonLogin.user_clicks_on_log_in_button()"
+              "location": "stepsForHooks.HooksSteps.user_clicks_on_log_in_button()"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 171540800,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
-            "line": 24,
+            "before": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 20,
             "name": "user enters testskit12345@gmail.com email",
             "match": {
               "arguments": [
@@ -437,28 +415,69 @@
                   "offset": 12
                 }
               ],
-              "location": "steps.AmazonLogin.user_enters_email(java.lang.String)"
+              "location": "stepsForHooks.HooksSteps.user_enters_email(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "duration": 501400,
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1176902300,
-              "status": "passed"
+              "duration": 1505700,
+              "status": "skipped"
             },
-            "line": 25,
+            "before": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 21,
             "name": "user clicks continue button",
             "match": {
-              "location": "steps.AmazonLogin.user_clicks_continue_button()"
+              "location": "stepsForHooks.HooksSteps.user_clicks_continue_button()"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 63776200,
-              "status": "passed"
+              "duration": 494700,
+              "status": "skipped"
             },
-            "line": 26,
+            "before": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 22,
             "name": "user enters invalid WrongPassword",
             "match": {
               "arguments": [
@@ -467,292 +486,92 @@
                   "offset": 20
                 }
               ],
-              "location": "steps.AmazonLogin.user_enters_invalid_password(java.lang.String)"
+              "location": "stepsForHooks.HooksSteps.user_enters_invalid_password(java.lang.String)"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2122485800,
-              "status": "passed"
+              "duration": 500700,
+              "status": "skipped"
             },
-            "line": 27,
+            "before": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 23,
             "name": "user clicks on sign in button",
             "match": {
-              "location": "steps.AmazonLogin.user_clicks_on_sign_in_button()"
+              "location": "stepsForHooks.HooksSteps.user_clicks_on_sign_in_button()"
             },
+            "after": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
+                }
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4717045200,
-              "status": "passed"
+              "duration": 498600,
+              "status": "skipped"
             },
-            "line": 28,
+            "before": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.beforeSteps()"
+                }
+              }
+            ],
+            "line": 24,
             "name": "page displays invalid password error message",
             "match": {
-              "location": "steps.AmazonLogin.page_displays_invalid_password_error_message()"
+              "location": "stepsForHooks.HooksSteps.page_displays_invalid_password_error_message()"
             },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-08-18T01:14:31.604Z",
-        "line": 45,
-        "name": "Check if login is unsuccessful with invalid email",
-        "description": "",
-        "id": "test-login-functionality;check-if-login-is-unsuccessful-with-invalid-email;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 36,
-            "name": "browser is open",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 37,
-            "name": "user is on amazon home page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 38,
-            "name": "user clicks on login button",
-            "match": {
-              "location": "steps.AmazonLogin.user_clicks_on_log_in_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 39,
-            "name": "user enters wrong test_skit12345@gmail.com",
-            "match": {
-              "arguments": [
-                {
-                  "val": "test_skit12345@gmail.com",
-                  "offset": 18
+            "after": [
+              {
+                "result": {
+                  "status": "skipped"
+                },
+                "match": {
+                  "location": "stepsForHooks.HooksSteps.afterSteps()"
                 }
-              ],
-              "location": "steps.AmazonLogin.user_enters_wrong_email(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 997600,
-              "status": "skipped"
-            },
-            "line": 40,
-            "name": "user clicks continue button",
-            "match": {
-              "location": "steps.AmazonLogin.user_clicks_continue_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 41,
-            "name": "page displays invalid email error message",
-            "match": {
-              "location": "steps.AmazonLogin.page_displays_invalid_email_error_message()"
-            },
+              }
+            ],
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Test login functionality",
+    "name": "Check login functionality",
     "description": "",
-    "id": "test-login-functionality",
+    "id": "check-login-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AmazonLogin.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2021-08-18T01:14:31.621Z",
-        "line": 13,
-        "name": "Check if search is successful with valid search words",
-        "description": "",
-        "id": "test-search-functionality;check-if-search-is-successful-with-valid-search-words;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1348818100,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "browser is open - search",
-            "match": {
-              "location": "steps.AmazonSearch.browserIsOpenSearch()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2740352600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user is on amazon home page - search",
-            "match": {
-              "location": "steps.AmazonSearch.userIsOnAmazonHomePageSearch()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 701126700,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user enters search input laptop",
-            "match": {
-              "arguments": [
-                {
-                  "val": "laptop",
-                  "offset": 25
-                }
-              ],
-              "location": "steps.AmazonSearch.userEntersSearchInputInput(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3155651100,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user clicks enter",
-            "match": {
-              "location": "steps.AmazonSearch.user_clicks_enter()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 821037600,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "page displays search items",
-            "match": {
-              "location": "steps.AmazonSearch.page_displays_search_items()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Smoke"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-08-18T01:14:40.399Z",
-        "line": 24,
-        "name": "Check if search is successful with invalid search words",
-        "description": "",
-        "id": "test-search-functionality;check-if-search-is-successful-with-invalid-search-words;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1369522300,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "browser is open - search",
-            "match": {
-              "location": "steps.AmazonSearch.browserIsOpenSearch()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3816381500,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "user is on amazon home page - search",
-            "match": {
-              "location": "steps.AmazonSearch.userIsOnAmazonHomePageSearch()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 698262300,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "user enters search input fjskdzslmdcbjfskd123e4r323",
-            "match": {
-              "arguments": [
-                {
-                  "val": "fjskdzslmdcbjfskd123e4r323",
-                  "offset": 25
-                }
-              ],
-              "location": "steps.AmazonSearch.userEntersSearchInputInput(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 961879000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "user clicks enter",
-            "match": {
-              "location": "steps.AmazonSearch.user_clicks_enter()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4730231900,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "page displays search error",
-            "match": {
-              "location": "steps.AmazonSearch.page_displays_search_error()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "Test search functionality",
-    "description": "",
-    "id": "test-search-functionality",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AmazonSearch.feature",
+    "uri": "file:src/test/resources/Hooks/Hooks.feature",
     "tags": []
   }
 ]

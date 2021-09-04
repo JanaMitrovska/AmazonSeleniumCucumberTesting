@@ -48,6 +48,9 @@ public class HomePage_PF {
     @FindBy(className = "a-popover-content")
     WebElement errorQuantity;
 
+    @FindBy(className = "a-color-link")
+    WebElement deleteButton;
+
 
 
     WebDriver driver;
@@ -84,5 +87,5 @@ public class HomePage_PF {
     public void SelectQuantity4() { quantity.click();}
     public void ErrorInQuantity() { errorQuantity.isDisplayed(); }
 
-
+    public void DeleteButton() {deleteButton.click();}
 }

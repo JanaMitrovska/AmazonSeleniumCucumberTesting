@@ -38,5 +38,21 @@ Feature: Testing shopping cart functionality
       | testskit12345@gmail.com | Skit123! |
 
 
+  Scenario Outline: Check if delete feature is successful
+    Given browser is open - login
+    And user is on amazon home page - login
+    When user clicks on login button
+    And user enters <email> email
+    And user clicks continue button
+    And user enters <password> password
+    And user clicks on sign in button
+    When user clicks cart button
+    And user clicks delete button
+    Then cart is empty
+
+
+    Examples:
+      | email                   | password |
+      | testskit12345@gmail.com | Skit123! |
 
   

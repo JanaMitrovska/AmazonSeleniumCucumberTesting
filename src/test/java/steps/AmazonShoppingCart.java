@@ -129,7 +129,6 @@ public class AmazonShoppingCart {
         }else{
             throw new NullPointerException();
         }
-
     }
 
     //-----------------------
@@ -150,5 +149,29 @@ public class AmazonShoppingCart {
         driver.quit();
     }
 
+    //------
+    @When("user clicks delete button")
+    public void user_clicks_delete_button() {
+        System.out.println("user clicks delete button");
 
+        home.DeleteButton();
+    }
+
+    @Then("cart is empty")
+    public void cart_is_empty() {
+        System.out.println("cart is empty");
+
+        String kk = driver.findElement(By.className("sc-number-of-items")).getText();
+
+        System.out.println(kk);
+
+        //istrazi povekje
+
+        if(kk.equals("Subtotal (0 items):")){
+            driver.close();
+            driver.quit();
+        }else{
+            System.out.println("Ne raboti"+kk);
+        }
+    }
 }
