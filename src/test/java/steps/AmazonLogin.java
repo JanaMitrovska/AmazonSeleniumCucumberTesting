@@ -1,6 +1,5 @@
 package steps;
 
-import Pages.AmazonLoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,63 +16,63 @@ public class AmazonLogin {
     HomePage_PF home;
     LoginPage_PF login;
 
-    @Given("browser is open - login")
-    public void browserIsOpenLogin() {
-        System.out.println("Browser is open");
-        //smeni lokacija na driver
-        System.setProperty("webdriver.chrome.driver", "C:/Users/mitro/Desktop/CucumberTests/src/test/resources/drivers/chromedriver.exe");
-
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
-
-    @And("user is on amazon home page - login")
-    public void userIsOnAmazonHomePageLogin() {
-        System.out.println("User is on amazon home page");
-
-        driver.navigate().to("https://amazon.com");
-    }
-
-    @When("user clicks on login button")
-    public void user_clicks_on_log_in_button() {
-        System.out.println("User clicks on login button");
-
-        login = new LoginPage_PF (driver);
-
-        login.clickLogin();
-    }
-
-    @When("^user enters (.*) email$")
-    public void user_enters_email(String email) {
-        System.out.println("User enters email");
-
-        login.enterEmail(email);
-    }
-
-    @When("user clicks continue button")
-    public void user_clicks_continue_button() {
-        System.out.println("User clicks continue button");
-
-        login.clickContinue();
-    }
-
-    @When("^user enters (.*) password$")
-    public void user_enters_password(String password) {
-        System.out.println("User enters password");
-
-        login.enterPassword(password);
-    }
-
-    @When("user clicks on sign in button")
-    public void user_clicks_on_sign_in_button() throws InterruptedException {
-        System.out.println("User clicks signin button");
-
-        login.clickSignIn();
-
-        Thread.sleep(2000);
-    }
+//    @Given("browser is open - login")
+//    public void browserIsOpenLogin() {
+//        System.out.println("Browser is open");
+//        //smeni lokacija na driver
+//        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+//
+//        driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//    }
+//
+//    @And("user is on amazon home page - login")
+//    public void userIsOnAmazonHomePageLogin() {
+//        System.out.println("User is on amazon home page");
+//
+//        driver.navigate().to("https://amazon.com");
+//    }
+//
+//    @When("user clicks on login button")
+//    public void user_clicks_on_log_in_button() {
+//        System.out.println("User clicks on login button");
+//
+//        login = new LoginPage_PF (driver);
+//
+//        login.clickLogin();
+//    }
+//
+//    @When("^user enters (.*) email$")
+//    public void user_enters_email(String email) {
+//        System.out.println("User enters email");
+//
+//        login.enterEmail(email);
+//    }
+//
+//    @When("user clicks continue button")
+//    public void user_clicks_continue_button() {
+//        System.out.println("User clicks continue button");
+//
+//        login.clickContinue();
+//    }
+//
+//    @When("^user enters (.*) password$")
+//    public void user_enters_password(String password) {
+//        System.out.println("User enters password");
+//
+//        login.enterPassword(password);
+//    }
+//
+//    @When("user clicks on sign in button")
+//    public void user_clicks_on_sign_in_button() throws InterruptedException {
+//        System.out.println("User clicks signin button");
+//
+//        login.clickSignIn();
+//
+//        Thread.sleep(2000);
+//    }
 
     @Then("user is navigated to the home page - login")
     public void userIsNavigatedToTheHomePageLogin() {
@@ -124,8 +123,5 @@ public class AmazonLogin {
         driver.close();
         driver.quit();
     }
-
-
-
 }
 

@@ -36,6 +36,20 @@ public class HomePage_PF {
     @FindBy(xpath = "//*[@id='GLUXZipError']/div/div/i")
     WebElement deliverToError;
 
+    @FindBy(id = "nav-cart-count-container")
+    WebElement cartButton;
+
+    @FindBy(className = "a-dropdown-prompt")
+    WebElement quantityDropdown;
+
+    @FindBy(id = "quantity_2")
+    WebElement quantity;
+
+    @FindBy(className = "a-popover-content")
+    WebElement errorQuantity;
+
+
+
     WebDriver driver;
 
     public HomePage_PF(WebDriver driver) {
@@ -62,5 +76,13 @@ public class HomePage_PF {
     public void ApplyButtonClicked(){applyButton.click();}
     public void ContinueButtonIsClicked(){continueButton.click();}
     public void DeliverToErrorDisplayed(){deliverToError.isDisplayed();}
+
+
+    public void ClickShoppingCart() {cartButton.click();}
+    public void ClickQuantityDropdown() {quantityDropdown.click();}
+    public void SelectQuantity2() { quantity.click();}
+    public void SelectQuantity4() { quantity.click();}
+    public void ErrorInQuantity() { errorQuantity.isDisplayed(); }
+
 
 }
