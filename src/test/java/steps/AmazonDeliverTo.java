@@ -20,7 +20,7 @@ public class AmazonDeliverTo {
         System.out.println("Browser is open");
         //smeni lokacija na driver
         System.setProperty("webdriver.chrome.driver",
-                "C:/Users/mitro/Desktop/CucumberTests/src/test/resources/drivers/chromedriver.exe");
+                "src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -38,19 +38,23 @@ public class AmazonDeliverTo {
 
 
     @When("user clicks on deliver to button")
-    public void user_clicks_on_deliver_to_button() {
+    public void user_clicks_on_deliver_to_button() throws InterruptedException {
         System.out.println("User clicks deliver to button");
 
         home = new HomePage_PF(driver);
 
         home.DeliverToClicked();
+
+        Thread.sleep(2000);
     }
 
     @And("^user enters deliver to zipcode (.*)$")
-    public void userEntersDeliverToZipcodeZipcode(String zipcode) {
+    public void userEntersDeliverToZipcodeZipcode(String zipcode) throws InterruptedException {
         System.out.println("User enters zipcode");
 
         home.ZipCodeIsEntered(zipcode);
+
+        Thread.sleep(2000);
     }
 
 
@@ -63,6 +67,8 @@ public class AmazonDeliverTo {
 
         driver.close();
         driver.quit();
+
+
     }
 
     //===================

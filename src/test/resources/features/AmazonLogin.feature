@@ -33,8 +33,8 @@ Feature: Test login functionality
 
 
   Scenario Outline: Check if login is unsuccessful with invalid email
-    Given browser is open
-    And user is on amazon home page
+    Given browser is open - login
+    And user is on amazon home page - login
     When user clicks on login button
     And user enters wrong <email>
     And user clicks continue button

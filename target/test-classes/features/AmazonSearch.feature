@@ -1,6 +1,5 @@
 Feature: Test search functionality
 
-  @Smoke
   Scenario Outline: Check if search is successful with valid search words
     Given browser is open - search
     And user is on amazon home page - search

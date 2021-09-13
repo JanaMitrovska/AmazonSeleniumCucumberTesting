@@ -11,8 +11,7 @@ public class ProductsPage_PF {
     @FindBy(className = "sg-col-inner")
     WebElement productsDisplayed;
 
-    //vidi dali moze outline da se napravi da se zimaat razlicni produkti
-    @FindBy(xpath = "//*[@id='search']/div[1]/div/div[1]/div[1]/span[3]/div[2]/div[3]/div/span/div/div/div/div/div[2]/div[2]/div/div/div[1]/h2/a/span")
+    @FindBy(className = "s-image")
     WebElement product;
 
     @FindBy(id = "add-to-cart-button")

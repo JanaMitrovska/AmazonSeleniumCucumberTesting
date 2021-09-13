@@ -32,7 +32,6 @@ public class HomePage_PF {
     @FindBy(className = "GLUXConfirmClose")
     WebElement continueButton;
 
-    ////*[@id="GLUXZipError"]/div/div/i
     @FindBy(xpath = "//*[@id='GLUXZipError']/div/div/i")
     WebElement deliverToError;
 
@@ -51,7 +50,29 @@ public class HomePage_PF {
     @FindBy(className = "a-color-link")
     WebElement deleteButton;
 
+    @FindBy(id = "sc-subtotal-label-activecart")
+    WebElement subtotalText;
 
+    @FindBy(name = "submit.save-for-later.Cb8f43b40-5726-453f-82e1-f068698822df")
+    WebElement saveForLaterButton;
+
+    @FindBy(id = "sc-saved-cart-list-caption-text")
+    WebElement saveForLaterText;
+
+    @FindBy(className = "a-button-input")
+    WebElement moveToCart;
+
+    @FindBy(className = "icp-nav-flag")
+    WebElement flag;
+
+    @FindBy(id = "icp-sl-t-hint")
+    WebElement language;
+
+    @FindBy(className = "a-button-input")
+    WebElement saveChanges;
+
+    @FindBy(id = "nav-link-accountList-nav-line-1")
+    WebElement languageText;
 
     WebDriver driver;
 
@@ -87,5 +108,38 @@ public class HomePage_PF {
     public void SelectQuantity4() { quantity.click();}
     public void ErrorInQuantity() { errorQuantity.isDisplayed(); }
 
+
     public void DeleteButton() {deleteButton.click();}
+
+    public String getSubtotalText() {
+        String text = subtotalText.getText();
+        return text;
+    }
+
+    public void SaveForLaterButton() { saveForLaterButton.click(); }
+    public String getSaveForLaterText() {
+        String text = saveForLaterText.getText();
+        return text;
+    }
+
+    public void ClickMoveToCart() {
+        moveToCart.click();
+    }
+
+    public void ClickFlag() {
+        flag.click();
+    }
+
+    public void SelectLanguage() {
+        language.click();
+    }
+
+    public void saveChanges() {
+        saveChanges.click();
+    }
+
+    public String getLanguageText() {
+        String text = languageText.getText();
+        return text;
+    }
 }

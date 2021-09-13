@@ -19,7 +19,11 @@ public class AmazonShoppingCart {
     HomePage_PF home;
     LoginPage_PF login;
 
-    @Given("browser is open - login")
+    //-------------------------------------------------------------------------------------------
+    //Quantity button steps
+    //-------------------------------------------------------------------------------------------
+
+    @Given("browser is open - Shopping cart")
     public void browserIsOpenLogin() {
         System.out.println("Browser is open");
         //smeni lokacija na driver
@@ -31,14 +35,14 @@ public class AmazonShoppingCart {
         driver.manage().window().maximize();
     }
 
-    @And("user is on amazon home page - login")
+    @And("user is on amazon home page - Shopping cart")
     public void userIsOnAmazonHomePageLogin() {
         System.out.println("User is on amazon home page");
 
         driver.navigate().to("https://amazon.com");
     }
 
-    @When("user clicks on login button")
+    @When("user clicks on login button - Shopping cart")
     public void user_clicks_on_log_in_button() {
         System.out.println("User clicks on login button");
 
@@ -47,28 +51,28 @@ public class AmazonShoppingCart {
         login.clickLogin();
     }
 
-    @When("^user enters (.*) email$")
+    @When("^user enters (.*) email - Shopping cart$")
     public void user_enters_email(String email) {
         System.out.println("User enters email");
 
         login.enterEmail(email);
     }
 
-    @When("user clicks continue button")
+    @When("user clicks continue button - Shopping cart")
     public void user_clicks_continue_button() {
         System.out.println("User clicks continue button");
 
         login.clickContinue();
     }
 
-    @When("^user enters (.*) password$")
+    @When("^user enters (.*) password - Shopping cart$")
     public void user_enters_password(String password) {
         System.out.println("User enters password");
 
         login.enterPassword(password);
     }
 
-    @When("user clicks on sign in button")
+    @When("user clicks on sign in button - Shopping cart")
     public void user_clicks_on_sign_in_button() throws InterruptedException {
         System.out.println("User clicks signin button");
 
@@ -77,7 +81,7 @@ public class AmazonShoppingCart {
         Thread.sleep(2000);
     }
 
-    @Given("home page is open")
+    @Given("home page is open - Shopping cart")
     public void HomePageIsOpen() {
         System.out.println("home page is open");
         //smeni lokacija na driver
@@ -121,9 +125,9 @@ public class AmazonShoppingCart {
     public void mulitple_products_are_displayed_in_shopping_cart() {
         System.out.println("multiple products are displayed in shopping cart");
 
-        String kk = driver.findElement(By.className("sc-number-of-items")).getText();
+        String text = home.getSubtotalText();
 
-        if(kk.equals("Subtotal (2 items):")){
+        if(text.equals("Subtotal (2 items):")){
             driver.close();
             driver.quit();
         }else{
@@ -131,7 +135,8 @@ public class AmazonShoppingCart {
         }
     }
 
-    //-----------------------
+
+
     @When("user selects a invalid quantity")
     public void UserSelectsAInvalidQuantity() {
         System.out.println("user selects a invalid quantity");
@@ -149,7 +154,11 @@ public class AmazonShoppingCart {
         driver.quit();
     }
 
-    //------
+    //-------------------------------------------------------------------------------------------
+    //Delete button steps
+    //-------------------------------------------------------------------------------------------
+
+
     @When("user clicks delete button")
     public void user_clicks_delete_button() {
         System.out.println("user clicks delete button");
@@ -161,17 +170,70 @@ public class AmazonShoppingCart {
     public void cart_is_empty() {
         System.out.println("cart is empty");
 
-        String kk = driver.findElement(By.className("sc-number-of-items")).getText();
+        String text = home.getSubtotalText();
 
-        System.out.println(kk);
-
-        //istrazi povekje
-
-        if(kk.equals("Subtotal (0 items):")){
+        if(text.equals("Subtotal (0 items):")){
             driver.close();
             driver.quit();
         }else{
-            System.out.println("Ne raboti"+kk);
+            throw new NullPointerException();
         }
+    }
+
+
+    //-------------------------------------------------------------------------------------------
+    //Save for later button steps
+    //-------------------------------------------------------------------------------------------
+
+    @When("user clicks save for later button")
+    public void user_clicks_save_for_later_button() throws InterruptedException {
+        System.out.println("user clicks save for later button");
+
+        home.SaveForLaterButton();
+
+        Thread.sleep(2000);
+    }
+
+    @Then("product is in save for later")
+    public void productIsInSaveForLater() {
+        System.out.println("product is in save for later");
+
+        String text = home.getSaveForLaterText();
+        System.out.println(text);
+        if(text.equals("Saved for later (1 item)")){
+            driver.close();
+            driver.quit();
+        }else{
+            throw new NullPointerException();
+        }
+    }
+
+
+    //-------------------------------------------------------------------------------------------
+    //Move from Save for later to Cart steps
+    //-------------------------------------------------------------------------------------------
+
+    @And("user clicks move to cart button")
+    public void userClicksMoveToCartButton() throws InterruptedException {
+        System.out.println("user clicks move to cart button");
+
+        home.ClickMoveToCart();
+
+        Thread.sleep(2000);
+    }
+
+    @Then("product is in shopping cart")
+    public void productIsInShoppingCart() {
+        System.out.println("product is in shopping cart");
+
+        String text = home.getSubtotalText();
+        System.out.println(text);
+        if(text.equals("Subtotal (1 item):")){
+            driver.close();
+            driver.quit();
+        }else{
+            throw new NullPointerException();
+        }
+
     }
 }
