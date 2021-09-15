@@ -32,7 +32,7 @@ public class LoginPage_PF {
 
     public LoginPage_PF(WebDriver driver) {
         this.driver = driver;
-        //koga ke se povika konstruktorot na ovaa linija se inicijaliziraat site promenlivi
+
         PageFactory.initElements(driver, this);
     }
 

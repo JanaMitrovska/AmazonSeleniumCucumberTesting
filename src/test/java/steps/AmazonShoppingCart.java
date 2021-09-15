@@ -4,12 +4,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageFactory.HomePage_PF;
 import pageFactory.LoginPage_PF;
-import pageFactory.ProductsPage_PF;
 
 import java.util.concurrent.TimeUnit;
 
@@ -26,7 +24,7 @@ public class AmazonShoppingCart {
     @Given("browser is open - Shopping cart")
     public void browserIsOpenLogin() {
         System.out.println("Browser is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();
@@ -84,7 +82,7 @@ public class AmazonShoppingCart {
     @Given("home page is open - Shopping cart")
     public void HomePageIsOpen() {
         System.out.println("home page is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();

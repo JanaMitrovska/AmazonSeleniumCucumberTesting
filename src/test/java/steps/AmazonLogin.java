@@ -19,7 +19,7 @@ public class AmazonLogin {
     @Given("browser is open - login")
     public void browserIsOpenLogin() {
         System.out.println("Browser is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();

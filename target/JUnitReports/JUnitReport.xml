@@ -1,258 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="272.977">
-    <testcase classname="Test add to cart functionality" name="Check if add to cart feature is successful" time="29.047">
-        <system-out><![CDATA[Given browser is open - add to cart.........................................passed
-And user is on amazon home page - add to cart...............................passed
-When user clicks on login button - add to cart..............................passed
-And user enters testskit12345@gmail.com email - add to cart.................passed
-And user clicks continue button - add to cart...............................passed
-And user enters valid Skit123! - add to cart................................passed
-And user clicks on sign in button - add to cart.............................passed
-And page displays products..................................................passed
-When products are displayed.................................................passed
-And user clicks on product..................................................passed
-And user clicks add to cart.................................................passed
-Then product is displayed in shopping cart..................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test Changing the language functionality" name="Check if change language feature is functional" time="10.937">
-        <system-out><![CDATA[Given browser is open - change language.....................................passed
-And user is on amazon home page - change language...........................passed
-When user clicks on flag....................................................passed
-And user selects spanish....................................................passed
-And user saves changes......................................................passed
-Then user is navigated to the spanish home page.............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test deliver to functionality" name="Check if deliver to information is valid" time="12.562">
-        <system-out><![CDATA[Given browser is open - deliver to..........................................passed
-And user is on amazon home page - deliver to................................passed
-When user clicks on deliver to button.......................................passed
-And user enters deliver to zipcode 20008....................................passed
-Then user is navigated to the home page.....................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test deliver to functionality" name="Check if deliver to is invalid" time="13.524">
-        <system-out><![CDATA[Given browser is open - deliver to..........................................passed
-And user is on amazon home page - deliver to................................passed
-When user clicks on deliver to button.......................................passed
-And user enters deliver to zipcode 1300.....................................passed
-Then page displays error....................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test login functionality" name="Check if login is successful with valid credentials" time="13.19">
-        <system-out><![CDATA[Given browser is open - login...............................................passed
-And user is on amazon home page - login.....................................passed
-When user clicks on login button............................................passed
-And user enters testskit12345@gmail.com email...............................passed
-And user clicks continue button.............................................passed
-And user enters Skit123! password...........................................passed
-And user clicks on sign in button...........................................passed
-Then user is navigated to the home page - login.............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test login functionality" name="Check if login is unsuccessful with invalid password" time="12.004">
-        <system-out><![CDATA[Given browser is open - login...............................................passed
-And user is on amazon home page - login.....................................passed
-When user clicks on login button............................................passed
-And user enters testskit12345@gmail.com email...............................passed
-And user clicks continue button.............................................passed
-And user enters invalid WrongPassword.......................................passed
-And user clicks on sign in button...........................................passed
-Then page displays invalid password error message...........................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test login functionality" name="Check if login is unsuccessful with invalid email" time="9.275">
-        <system-out><![CDATA[Given browser is open - login...............................................passed
-And user is on amazon home page - login.....................................passed
-When user clicks on login button............................................passed
-And user enters wrong test_skit12345@gmail.com..............................passed
-And user clicks continue button.............................................passed
-Then page displays invalid email error message..............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test search functionality" name="Check if search is successful with valid search words" time="5.953">
-        <system-out><![CDATA[Given browser is open - search..............................................passed
-And user is on amazon home page - search....................................passed
-When user enters search input laptop........................................passed
-And user clicks enter.......................................................passed
-Then page displays search items.............................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test search functionality" name="Check if search is successful with invalid search words" time="6.13">
-        <system-out><![CDATA[Given browser is open - search..............................................passed
-And user is on amazon home page - search....................................passed
-When user enters search input fjskdzslmdcbjfskd123e4r323....................passed
-And user clicks enter.......................................................passed
-Then page displays search error.............................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Testing shopping cart functionality" name="Check if quantity feature is successful" time="11.165">
-        <failure message="" type="java.lang.NullPointerException"><![CDATA[Given browser is open - Shopping cart.......................................passed
-And user is on amazon home page - Shopping cart.............................passed
-When user clicks on login button - Shopping cart............................passed
-And user enters testskit12345@gmail.com email - Shopping cart...............passed
-And user clicks continue button - Shopping cart.............................passed
-And user enters Skit123! password - Shopping cart...........................passed
-And user clicks on sign in button - Shopping cart...........................passed
-When user clicks cart button................................................passed
-And user clicks on quantity dropdown button.................................passed
-And user selects a quantity.................................................passed
-Then multiple products are displayed in shopping cart.......................failed
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="28.925">
+    <testcase classname="Check login functionality" name="Check if login is successful with valid credentials" time="16.277">
+        <failure message="Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'&#10;System info: host: 'TEODORA', ip: '192.168.100.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">
+            <![CDATA[Given user is on amazon home page - hooks...................................passed
+When user clicks on login button - hooks....................................passed
+And user enters testskit12345@gmail.com email - hooks.......................passed
+And user clicks continue button - hooks.....................................passed
+And user enters Skit123! password - hooks...................................passed
+And user clicks on sign in button - hooks...................................passed
+Then user is navigated to the home page - hooks.............................passed
 
 StackTrace:
-java.lang.NullPointerException
-	at steps.AmazonShoppingCart.mulitple_products_are_displayed_in_shopping_cart(AmazonShoppingCart.java:134)
-	at ✽.multiple products are displayed in shopping cart(file:///C:/Users/mitro/Desktop/AmazonTesting/src/test/resources/features/AmazonShoppingCart.feature:14)
-]]></failure>
-    </testcase>
-    <testcase classname="Testing shopping cart functionality" name="Check if quantity feature is unsuccessful" time="41.407">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.a\-popover\-content&quot;}&#10;  (Session info: chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'&#10;System info: host: 'DESKTOP-UJ6OHJT', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\mitro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51341}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 4c9b892d33762afde1bf9694b6099513&#10;*** Element info: {Using=class name, value=a-popover-content}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given browser is open - Shopping cart.......................................passed
-And user is on amazon home page - Shopping cart.............................passed
-When user clicks on login button - Shopping cart............................passed
-And user enters testskit12345@gmail.com email - Shopping cart...............passed
-And user clicks continue button - Shopping cart.............................passed
-And user enters Skit123! password - Shopping cart...........................passed
-And user clicks on sign in button - Shopping cart...........................passed
-When user clicks cart button................................................passed
-And user clicks on quantity dropdown button.................................passed
-And user selects a invalid quantity.........................................passed
-Then error is displayed in shopping cart....................................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".a\-popover\-content"}
-  (Session info: chrome=92.0.4515.159)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
-System info: host: 'DESKTOP-UJ6OHJT', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\mitro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51341}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4c9b892d33762afde1bf9694b6099513
-*** Element info: {Using=class name, value=a-popover-content}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+System info: host: 'TEODORA', ip: '192.168.100.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:431)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:437)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)
-	at pageFactory.HomePage_PF.ErrorInQuantity(HomePage_PF.java:109)
-	at steps.AmazonShoppingCart.error_is_displayed_in_shopping_cart(AmazonShoppingCart.java:151)
-	at ✽.error is displayed in shopping cart(file:///C:/Users/mitro/Desktop/AmazonTesting/src/test/resources/features/AmazonShoppingCart.feature:33)
-]]></failure>
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:468)
+	at stepsForHooks.HooksSteps.tearDown(HooksSteps.java:35)
+]]>
+        </failure>
     </testcase>
-    <testcase classname="Testing shopping cart functionality" name="Check if delete feature is successful" time="18.231">
-        <system-out><![CDATA[Given browser is open - Shopping cart.......................................passed
-And user is on amazon home page - Shopping cart.............................passed
-When user clicks on login button - Shopping cart............................passed
-And user enters testskit12345@gmail.com email - Shopping cart...............passed
-And user clicks continue button - Shopping cart.............................passed
-And user enters Skit123! password - Shopping cart...........................passed
-And user clicks on sign in button - Shopping cart...........................passed
-When user clicks cart button................................................passed
-And user clicks delete button...............................................passed
-Then cart is empty..........................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Testing shopping cart functionality" name="Check if save for later is successful" time="43.145">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name='submit.save-for-later.Cb8f43b40-5726-453f-82e1-f068698822df']&quot;}&#10;  (Session info: chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'&#10;System info: host: 'DESKTOP-UJ6OHJT', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\mitro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51361}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5df89affa772c5ed0dd346b27e6e5859&#10;*** Element info: {Using=name, value=submit.save-for-later.Cb8f43b40-5726-453f-82e1-f068698822df}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given browser is open - Shopping cart.......................................passed
-And user is on amazon home page - Shopping cart.............................passed
-When user clicks on login button - Shopping cart............................passed
-And user enters testskit12345@gmail.com email - Shopping cart...............passed
-And user clicks continue button - Shopping cart.............................passed
-And user enters Skit123! password - Shopping cart...........................passed
-And user clicks on sign in button - Shopping cart...........................passed
-When user clicks cart button................................................passed
-And user clicks save for later button.......................................failed
-Then product is in save for later...........................................skipped
+    <testcase classname="Check login functionality" name="Check if login is unsuccessful with invalid password" time="12.115">
+        <failure message="Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'&#10;System info: host: 'TEODORA', ip: '192.168.100.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchSessionException">
+            <![CDATA[Given user is on amazon home page - hooks...................................passed
+When user clicks on login button - hooks....................................passed
+And user enters testskit12345@gmail.com email - hooks.......................passed
+And user clicks continue button - hooks.....................................passed
+And user enters incorrect WrongPassword - hooks.............................passed
+And user clicks on sign in button - hooks...................................passed
+Then page displays invalid password error message - hooks...................passed
 
 StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='submit.save-for-later.Cb8f43b40-5726-453f-82e1-f068698822df']"}
-  (Session info: chrome=92.0.4515.159)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
-System info: host: 'DESKTOP-UJ6OHJT', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\mitro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51361}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5df89affa772c5ed0dd346b27e6e5859
-*** Element info: {Using=name, value=submit.save-for-later.Cb8f43b40-5726-453f-82e1-f068698822df}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+System info: host: 'TEODORA', ip: '192.168.100.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByName.findElement(By.java:311)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy21.click(Unknown Source)
-	at pageFactory.HomePage_PF.SaveForLaterButton(HomePage_PF.java:119)
-	at steps.AmazonShoppingCart.user_clicks_save_for_later_button(AmazonShoppingCart.java:192)
-	at ✽.user clicks save for later button(file:///C:/Users/mitro/Desktop/AmazonTesting/src/test/resources/features/AmazonShoppingCart.feature:69)
-]]></failure>
-    </testcase>
-    <testcase classname="Testing shopping cart functionality" name="Check if moving product from save for later to cart is successful" time="45.976">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#sc\-subtotal\-label\-activecart&quot;}&#10;  (Session info: chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'&#10;System info: host: 'DESKTOP-UJ6OHJT', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\mitro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63867}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0049f1a4155812a1c204bf5168c99062&#10;*** Element info: {Using=id, value=sc-subtotal-label-activecart}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given browser is open - Shopping cart.......................................passed
-And user is on amazon home page - Shopping cart.............................passed
-When user clicks on login button - Shopping cart............................passed
-And user enters testskit12345@gmail.com email - Shopping cart...............passed
-And user clicks continue button - Shopping cart.............................passed
-And user enters Skit123! password - Shopping cart...........................passed
-And user clicks on sign in button - Shopping cart...........................passed
-When user clicks cart button................................................passed
-And user clicks move to cart button.........................................passed
-Then product is in shopping cart............................................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#sc\-subtotal\-label\-activecart"}
-  (Session info: chrome=92.0.4515.159)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
-System info: host: 'DESKTOP-UJ6OHJT', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\mitro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63867}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0049f1a4155812a1c204bf5168c99062
-*** Element info: {Using=id, value=sc-subtotal-label-activecart}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:381)
-	at org.openqa.selenium.By$ById.findElement(By.java:194)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy21.getText(Unknown Source)
-	at pageFactory.HomePage_PF.getSubtotalText(HomePage_PF.java:115)
-	at steps.AmazonShoppingCart.productIsInShoppingCart(AmazonShoppingCart.java:229)
-	at ✽.product is in shopping cart(file:///C:/Users/mitro/Desktop/AmazonTesting/src/test/resources/features/AmazonShoppingCart.feature:88)
-]]></failure>
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:468)
+	at stepsForHooks.HooksSteps.tearDown(HooksSteps.java:35)
+]]>
+        </failure>
     </testcase>
 </testsuite>

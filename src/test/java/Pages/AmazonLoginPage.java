@@ -16,14 +16,8 @@ public class AmazonLoginPage {
     By password_error = By.className("a-alert-heading");
     By email_error = By.className("a-alert-content");
 
-    //constructor for parsing the chrome driver
     public AmazonLoginPage(WebDriver driver) {
         this.driver = driver;
-
-//        if(!driver.getTitle().equals("TestProject Demo")){
-//            throw new IllegalStateException("This is not Login Page. The current page is " +
-//                    driver.getCurrentUrl());
-//        }
     }
 
     public void clickLogin() {driver.findElement(login_button).click();}
@@ -42,13 +36,5 @@ public class AmazonLoginPage {
     }
     public void InvalidPasswordError() { driver.findElement(password_error).isDisplayed(); }
     public void InvalidEmailError() { driver.findElement(email_error).isDisplayed(); }
-
-
-//    public void validLogin(String email, String password){
-//        driver.findElement(txt_email).sendKeys(username);
-//        driver.findElement(txt_password).sendKeys(password);
-//        driver.findElement(login_button).click();
-//    }
-
 }
 

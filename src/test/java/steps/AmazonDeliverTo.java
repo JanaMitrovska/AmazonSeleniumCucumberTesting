@@ -18,7 +18,7 @@ public class AmazonDeliverTo {
     @Given("browser is open - deliver to")
     public void browserIsOpenDeliverTo() {
         System.out.println("Browser is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver",
                 "src/test/resources/drivers/chromedriver.exe");
 

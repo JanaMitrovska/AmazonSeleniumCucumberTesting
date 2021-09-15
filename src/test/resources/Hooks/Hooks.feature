@@ -1,13 +1,13 @@
 Feature: Check login functionality
 
   Scenario Outline:Check if login is successful with valid credentials
-    Given user is on amazon home page
-    When user clicks on login button
-    And user enters <email> email
-    And user clicks continue button
-    And user enters <password> password
-    And user clicks on sign in button
-    Then user is navigated to the home page - login
+    Given user is on amazon home page - hooks
+    When user clicks on login button - hooks
+    And user enters <email> email - hooks
+    And user clicks continue button - hooks
+    And user enters <password> password - hooks
+    And user clicks on sign in button - hooks
+    Then user is navigated to the home page - hooks
 
 
     Examples:
@@ -15,13 +15,13 @@ Feature: Check login functionality
       |    testskit12345@gmail.com  |    Skit123! |
 
   Scenario Outline: Check if login is unsuccessful with invalid password
-    Given user is on amazon home page
-    When user clicks on login button
-    And user enters <email> email
-    And user clicks continue button
-    And user enters invalid <password>
-    And user clicks on sign in button
-    Then page displays invalid password error message
+    Given user is on amazon home page - hooks
+    When user clicks on login button - hooks
+    And user enters <email> email - hooks
+    And user clicks continue button - hooks
+    And user enters incorrect <password> - hooks
+    And user clicks on sign in button - hooks
+    Then page displays invalid password error message - hooks
 
     Examples:
       |       email                  |      password         |

@@ -17,7 +17,7 @@ public class AddToCartTest {
     @Given("browser is open - add to cart")
     public void browserIsOpenLogin() {
         System.out.println("Browser is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         driver = new ChromeDriver();
@@ -75,7 +75,7 @@ public class AddToCartTest {
     @Given("page displays products")
     public void pageDisplaysProducts() {
         System.out.println("Browser is open");
-        //smeni lokacija na driver
+
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         driver.navigate().to("https://www.amazon.com/s?k=laptop&ref=nb_sb_noss_1");
@@ -116,7 +116,4 @@ public class AddToCartTest {
         driver.close();
         driver.quit();
     }
-
-
-
 }
